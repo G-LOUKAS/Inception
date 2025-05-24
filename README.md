@@ -44,56 +44,12 @@ inception/
 - Automatically initialized on first run using SQL setup scripts.  
 - Runs persistently with a named Docker volume.
 
-## 🛠️ Installation
-
-1. **Clone the repo**:
-   ```bash
-   git clone https://github.com/yourusername/inception.git
-   cd inception
-   ```
-
-2. **Configure environment**:  
-   Create a `.env` file in the `srcs/` directory:
-   ```env
-   DOMAIN_NAME=yourdomain.com
-   WP_DB_NAME=wordpress
-   WP_DB_USER=wp_user
-   WP_DB_PASSWORD=wp_pass
-   WP_ADMIN_USER=admin
-   WP_ADMIN_PASSWORD=admin123
-   WP_ADMIN_EMAIL=admin@yourdomain.com
-   ```
-
-3. **Build and run your containers**:
-   ```bash
-   cd srcs
-   docker-compose up --build
-   ```
-
-4. **Visit your website**:  
-   Navigate to `https://yourdomain.com` and complete the WordPress setup.
-
 ## 🔒 Security & Best Practices
 
 - All services run in **separate containers** for isolation.
 - SSL ensures encrypted traffic.
 - Docker **volumes** are used to persist data across reboots.
 - Containers are **restarted automatically** using `restart: always`.
-
-## 🧪 Testing Tips
-
-- Use `docker-compose ps` to see running containers.
-- Check logs with `docker-compose logs -f`.
-- Use `docker exec -it <container> sh` to explore containers.
-
-## ✅ Mandatory Requirements Covered
-
-- ✔️ Multi-container setup via Docker Compose  
-- ✔️ Isolated services  
-- ✔️ SSL-secured NGINX reverse proxy  
-- ✔️ Persistent volumes for WordPress and MariaDB  
-- ✔️ Automatic restarts  
-- ✔️ No hard-coded secrets  
 
 ## 🏁 Conclusion
 
